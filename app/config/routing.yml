@@ -1,0 +1,13 @@
+zero_api_doc:
+    resource: "@ZeroApiDocBundle/Resources/config/routing.yml"
+    prefix:   /docs
+
+NelmioApiDocBundle:
+    resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+    prefix:   /api/docs
+
+zero_user:
+    resource: "@ZeroUserBundle/Resources/config/users_routing.xml"
+    prefix:   /api/
+    type:     rest
+

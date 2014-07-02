@@ -1,0 +1,27 @@
+Zero\UserBundle\Entity\User\Comment:
+    exclusion_policy: ALL
+    access_type: public_method
+
+    properties:
+        id:
+            expose: true
+            read_only: true
+            type: integer
+        message:
+            expose: true
+            type: string
+
+    relations:
+         -
+            rel: self
+            href:
+                route: api_get_user_comment
+                parameters:
+                    userId: expr(object.getUser().getId())
+                    commentId: expr(object.getId())
+         -
+            rel: user
+            href:
+                route: api_get_user
+                parameters:
+                    userId: expr(object.getUser().getId())

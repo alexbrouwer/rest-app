@@ -34,3 +34,8 @@ assetic:
 
 #swiftmailer:
 #    delivery_address: me@example.com
+
+# JSM Serializer Configuration
+jms_serializer:
+    metadata:
+        cache: ~
